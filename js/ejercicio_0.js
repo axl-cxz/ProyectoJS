@@ -25,5 +25,5 @@ if (cantidadComprada < stockDisponible) {
     console.log("✅ Compra realizada con éxito.");
     console.log("📦 Stock actualizado:", stockDisponible);
 } else {
-    con0ole.log("❌ No hay suficiente stock disponible.");
+    console.log("❌ No hay suficiente stock disponible.");
 }
