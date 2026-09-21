@@ -16,4 +16,5 @@ if (numero >= 100)
  
     const numeroRomano = convertirARomanos(numero);
 
+    console.log("El numero normal es: ", numero)
     console.log("El número en romano es: ", numeroRomano);
