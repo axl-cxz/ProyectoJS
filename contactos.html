@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<div class="background-decorations">
+    <!-- Formas decorativas abstractas del fondo -->
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+    <div class="shape shape-3"></div>
+    <div class="shape shape-4"></div>
+  </div>
+
+  <main class="container">
+    <header class="form-header">
+      <h1>Formulario de contacto</h1>
+      <p>Por favor, complete sus datos y enviaremos su pedido en poco tiempo.</p>
+    </header>
+
+    <form class="contact-form" action="send.php" method="POST" id="form-contacto">
+        
+      
+      
+      <div class="form-group">
+        <label>Tu nombre</label>
+        <div class="input-row">
+          <input type="text" placeholder="Nombre" name="first_name">
+          <input type="text" placeholder="Apellido" name="last_name">
+        </div>
+      </div>
+
+      <!-- Your Email -->
+      <div class="form-group">
+        <label>Tu Email</label>
+        <div class="input-row">
+          <input type="email" placeholder="ola@gmail.com" name="email">
+        </div>ssss
+      </div>
+
+      <!-- Message Subject * -->
+      <div class="form-group">
+        <label>Asunto</label>
+        <div class="input-row">
+          <select name="subject">
+            <option value="other">Otros</option>
+            <option value="general">Consulta general</option>
+            <option value="support">Soporte</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Message * -->
+      <div class="form-group align-top">
+        <label>Mensaje</label>
+        <div class="input-row">
+          <textarea name="message" rows="5"></textarea>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="form-actions">
+        <button type="submit" class="btn-submit">SUBIR FORMULARIO</button>
+      </div>
+
+    </form>
+  </main>
+
+<!-- SweetAlert2 CSS y JS via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

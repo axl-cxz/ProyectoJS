@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0099ca 0%, #17b3c2 50%, #20c997 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  position: relative;
+  overflow-x: hidden;
+  color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  z-index: 2;
+}
+
+/* Encabezado */
+.form-header {
+  margin-bottom: 35px;
+}
+
+.form-header h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.form-header p {
+  font-size: 1.05rem;
+  opacity: 0.95;
+  font-weight: 300;
+}
+
+/* Estructura del Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.form-group.align-top {
+  align-items: flex-start;
+}
+
+.form-group label {
+  width: 160px;
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  flex-grow: 1;
+  max-width: 480px;
+}
+
+/* Campos de entrada, selects y textareas */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input[type="text"]::placeholder,
+input[type="email"]::placeholder {
+  color: #aaaaaa;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #0076a3;
+}
+
+/* Selector estilizado */
+select {
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%20c0c0c0" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  cursor: pointer;
+}
+
+/* Inputs de Teléfono */
+.phone-inputs input {
+  text-align: left;
+}
+
+.phone-inputs input:nth-child(1),
+.phone-inputs input:nth-child(2) {
+  width: 100px;
+}
+
+.phone-inputs input:nth-child(3) {
+  width: 120px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Separador */
+.divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.35);
+  margin: 15px 0 10px 0;
+}
+
+/* Botón de envío */
+.form-actions {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.btn-submit {
+  background: transparent;
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  padding: 12px 28px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #ffffff;
+  color: #0088b6;
+}
+
+/* Formas Abstractas del Fondo (Efecto Decorativo) */
+.background-decorations {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.shape {
+  position: absolute;
+  border-radius: 50px;
+  transform: rotate(-45deg);
+  opacity: 0.75;
+}
+
+.shape-1 {
+  width: 60px;
+  height: 500px;
+  background: #eaff6b;
+  right: 150px;
+  top: -100px;
+}
+
+.shape-2 {
+  width: 70px;
+  height: 600px;
+  background: #ff5e7e;
+  right: 60px;
+  top: -50px;
+}
+
+.shape-3 {
+  width: 80px;
+  height: 550px;
+  background: #50e3c2;
+  right: -20px;
+  top: 50px;
+}
+
+.shape-4 {
+  width: 50px;
+  height: 400px;
+  background: #ff7555;
+  right: 100px;
+  bottom: -150px;
+}
+
+/* Adaptabilidad para pantallas pequeñas */
+@media (max-width: 650px) {
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .form-group label {
+    width: 100%;
+  }
+
+  .input-row {
+    width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+  }
+
+  .phone-inputs {
+    flex-direction: row;
+  }
+
+  .phone-inputs input {
+    width: 100% !important;
+  }
+}
